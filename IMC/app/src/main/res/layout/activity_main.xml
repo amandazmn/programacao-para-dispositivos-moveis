@@ -17,7 +17,8 @@
             android:id="@+id/textViewPeso"
             android:layout_width="118dp"
             android:layout_height="wrap_content"
-            android:text="Peso" />
+            android:text="Peso"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/txtPeso"
@@ -26,7 +27,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Peso" />
+            android:hint="Peso" />
 
     </LinearLayout>
 
@@ -40,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Altura" />
+            android:text="Altura"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/txtAltura"
@@ -49,7 +51,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Altura" />
+            android:hint="Altura" />
     </LinearLayout>
 
     <Button
