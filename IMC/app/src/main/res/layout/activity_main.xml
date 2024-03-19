@@ -14,19 +14,19 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewNome"
+            android:id="@+id/textViewPeso"
             android:layout_width="118dp"
             android:layout_height="wrap_content"
-            android:text="Nome" />
+            android:text="Peso" />
 
         <EditText
-            android:id="@+id/txt1"
+            android:id="@+id/txtPeso"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Peso" />
 
     </LinearLayout>
 
@@ -36,20 +36,28 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/textViewAltura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="E-mail" />
+            android:text="Altura" />
 
         <EditText
-            android:id="@+id/txt2"
+            android:id="@+id/txtAltura"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Altura" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="calcular"
+        android:text="Calcular" />
 
 </LinearLayout>
