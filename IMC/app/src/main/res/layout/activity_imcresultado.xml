@@ -8,29 +8,37 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="272dp"
-        android:layout_height="93dp"
+        android:layout_width="274dp"
+        android:layout_height="51dp"
         android:text="Resultado"
         android:textAlignment="center"
         android:textColor="@color/teal_700"
         android:textColorHint="@color/teal_700"
-        android:textSize="48sp"
+        android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewResultado"
-        android:layout_width="242dp"
-        android:layout_height="95dp"
+        android:layout_width="245dp"
+        android:layout_height="52dp"
         android:text="aaa"
         android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewResultado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado"
+        app:srcCompat="@drawable/perfil"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
