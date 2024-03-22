@@ -16,29 +16,65 @@
         android:textColorHint="@color/teal_700"
         android:textSize="34sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
+        app:layout_constraintBottom_toTopOf="@+id/tvAltura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewResultado"
-        android:layout_width="245dp"
-        android:layout_height="52dp"
-        android:text="aaa"
+        android:layout_width="249dp"
+        android:layout_height="44dp"
+        android:text="IMC:"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewResultado"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvImcTexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPeso" />
+
+    <ImageView
+        android:id="@+id/imageViewResultado"
+        android:layout_width="315dp"
+        android:layout_height="255dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvImcTexto"
+        app:srcCompat="@drawable/perfil" />
+
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="244dp"
+        android:layout_height="59dp"
+        android:text="Altura: "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPeso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <ImageView
-        android:id="@+id/imageViewResultado"
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="244dp"
+        android:layout_height="53dp"
+        android:text="Peso: "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAltura" />
+
+    <TextView
+        android:id="@+id/tvImcTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultado"
-        app:srcCompat="@drawable/perfil"
-        tools:layout_editor_absoluteX="0dp" />
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
 </androidx.constraintlayout.widget.ConstraintLayout>

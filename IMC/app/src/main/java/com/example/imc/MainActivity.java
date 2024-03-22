@@ -33,9 +33,22 @@ public class MainActivity extends AppCompatActivity {
 
         String imc = df.format(imcD);
 
+        String pesoS = df.format(peso);
+        String alturaS = df.format(altura);
+
         Toast.makeText(this, imc, Toast.LENGTH_SHORT).show();
+
+        Bundle bundle = new Bundle();
+        bundle.putDouble("valorimc", imcD);
+        bundle.putString("imc", imc);
+        bundle.putString("altura", alturaS);
+        bundle.putString("peso", pesoS);
+
         Intent intent = new Intent(getApplicationContext(), IMCResultado.class);
-        intent.putExtra("valorimc", imc);
+        intent.putExtras(bundle);
         startActivity(intent);
+
+
+
     }
 }
