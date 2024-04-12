@@ -2,6 +2,7 @@ package com.example.listagem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lv = findViewById(R.id.listView);
         //Configurando um adaptador para listagem de dados
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                getApplicationContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
+        ArrayAdapter<String> adapter = new ArrayAdapter(
+                this,
+                R.layout.item_lista,
+                R.id.textViewNome,
                 nomes
         );
         lv.setAdapter(adapter);
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("clickitem", Integer.toString(i));
+                Intent intent = new Intent(getApplicationContext(), ExibeActivity.class);
+                intent.putExtra("posicao", i);
+                startActivity(intent);
             }
         });
     }
